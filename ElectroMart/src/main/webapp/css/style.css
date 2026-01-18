@@ -1,0 +1,1378 @@
+/* ================================
+   GLOBAL RESETS
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #f5f7fa;
+}
+
+/* =======================================================
+   SUCCESS MESSAGE BOX (ElectroMart Premium Style)
+======================================================= */
+.msg-box-success{
+    width: 90%;
+    margin: 20px auto;
+    padding: 14px 20px;
+	text-align: center;
+    background: linear-gradient(90deg, #e6f9ec, #d3f6e2);
+    border-left: 6px solid #00b454;
+    color: #05843e;
+    font-size: 16.5px;
+    font-weight: 600;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    animation: msgPop 0.4s ease-out;
+}
+ 
+/* Success Icon */
+.msg-box-success::before {
+    content: "✔";
+    font-size: 20px;
+    font-weight: bold;
+    color: #00a044;
+}
+
+.msg-box-success:empty {
+    display: none;
+}
+
+
+/* Animation */
+@keyframes msgPop {
+    from { opacity: 0; transform: translateY(-8px) scale(0.95); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+
+/* ================================
+   HEADER CONTAINER
+================================ */
+.nav-container {
+    width: 100%;
+    background: #ffffff;
+    padding: 12px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e6e6e6;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+/* ===============================
+   LOGO – BLUE THEME / E-COMMERCE
+=============================== */
+
+.logo-area {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 800;
+    color: #005BFF;              /* primary blue */
+    text-decoration: none;
+    letter-spacing: 0.6px;
+    position: relative;
+    transition: color 0.25s ease;
+}
+
+/* subtle underline accent */
+.logo::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 35%;
+    height: 3px;
+    background: linear-gradient(90deg, #005BFF, #00B4FF);
+    border-radius: 6px;
+    transition: width 0.25s ease;
+}
+
+/* hover – elegant, not flashy */
+.logo:hover {
+    color: #003fbb;
+}
+
+.logo:hover::after {
+    width: 100%;
+}
+
+/* ================================
+   NAVIGATION MENU
+================================ */
+.menu {
+    display: flex;
+    gap: 28px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 6px 10px;
+    transition: 0.3s;
+    position: relative;
+}
+
+/* Hover underline effect */
+.menu a::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: -2px;
+    background: #005BFF;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #005BFF;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+/* ================================
+   RIGHT BUTTONS SECTION
+================================ */
+.right-buttons {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+/* Cart Icon */
+.cart-icon {
+    font-size: 22px;
+    text-decoration: none;
+    color: #333;
+    transition: 0.3s;
+}
+
+.cart-icon:hover {
+    color: #005BFF;
+    transform: scale(1.15);
+}
+
+/* ================================
+   BUTTONS
+================================ */
+.btn {
+    padding: 8px 16px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+/* Login Button */
+.btn.login {
+    background: #005BFF;
+    color: white;
+    border: 1px solid transparent;
+}
+
+.btn.login:hover {
+    background: #003bbd;
+}
+
+/* Logout Button */
+.btn.logout {
+    background: #ffffff;
+    border: 1px solid #005BFF;
+    color: #005BFF;
+}
+
+.btn.logout:hover {
+    background: #005BFF;
+    color: white;
+}
+
+/* ================================
+   DIVIDER LINE
+================================ */
+.divider {
+    border: none;
+    height: 1px;
+    background: #e1e1e1;
+}
+
+/* ================================
+   INDEX PAGE FULL BACKGROUND
+================================ */
+
+.index-bg {
+    width: 100%;
+    height: 90vh;
+    background: url("../images/index.png") no-repeat center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;   /* left align = matches image text position */
+    padding-left: 180px;        /* adjust to align exactly under text */
+    padding-top: 80px;         /* keeps button below text */
+}
+
+/* Get Started Button */
+.start-btn {
+    display: inline-block;
+    margin-top: 260px; /* BUTTON image text खाली येण्यासाठी perfect spacing */
+    padding: 12px 32px;
+    background: #005BFF;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+    transition: 0.3s ease;
+}
+
+.start-btn:hover {
+    background: #003bcc;
+    transform: translateY(-2px);
+}
+
+
+/* ================================
+   FOOTER STYLING - ELECTROMART STYLE
+================================ */
+
+.footer {
+    background: #0d1b3f;
+    color: #dce3f7;
+    padding: 50px 0 25px;
+    margin-top: 60px;
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.15);
+}
+
+.footer-container {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Footer Titles */
+.footer-title {
+    font-size: 26px;
+    color: #ffffff;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.footer-col h4 {
+    color: #ffffff;
+    margin-bottom: 12px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Footer Text */
+.footer-text {
+    color: #bfc9e8;
+    line-height: 1.6;
+}
+
+/* Footer Links */
+.footer-col a {
+    display: block;
+    color: #cdd6f3;
+    text-decoration: none;
+    margin: 6px 0;
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+.footer-col a:hover {
+    color: #4da3ff;
+    padding-left: 4px;
+}
+
+/* Footer Bottom Bar */
+.footer-bottom {
+    text-align: center;
+    color: #9fb0d9;
+    margin-top: 35px;
+    padding-top: 15px;
+    border-top: 1px solid #2a3b6f;
+    font-size: 14px;
+}
+
+/* ================================
+   CLEAN SMALL FOOTER - ELECTROMART STYLE
+================================ */
+
+.em-footer {
+    width: 100%;
+    padding: 14px 0;
+    background: #ffffff;
+    border-top: 1px solid #e6e6e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.em-footer-content p {
+    color: #555;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* -------------------------------
+   HERO BANNER
+--------------------------------*/
+.em-hero {
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(to right, #d9e8ff, #eef4ff);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 80px;
+}
+
+.hero-text h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #222;
+    max-width: 500px;
+}
+
+.hero-text h1 span {
+    color: #005BFF;
+}
+
+.hero-text p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #444;
+}
+
+.em-search {
+    margin-top: 20px;
+    padding: 12px 20px;
+    width: 380px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #bcd0ff;
+}
+
+/* Hero Image */
+.hero-img img {
+    width: 680px;
+	height: 420px;
+    filter: drop-shadow(0 10px 25px rgba(0,0,0,0.15));
+}
+
+/* -------------------------------
+   SECTION TITLE
+--------------------------------*/
+/* ------------------------------------
+   SUPER ATTRACTIVE HERO TEXT
+--------------------------------------*/
+
+.hero-heading {
+    font-size: 52px;
+    font-weight: 800;
+    color: #1d1d1d;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    animation: fadeDown 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+.brand-glow {
+    color: #005BFF;
+    position: relative;
+    text-shadow: 0px 0px 18px rgba(0, 111, 255, 0.45);
+}
+
+/* Subtitle */
+.hero-sub {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #444;
+    font-weight: 500;
+    animation: fadeUp 1s ease-out forwards;
+    opacity: 0;
+}
+
+/* Underline animation */
+.hero-underline {
+    width: 0px;
+    height: 4px;
+    background: linear-gradient(90deg, #005BFF, #00c6ff);
+    margin-top: 16px;
+    border-radius: 10px;
+    animation: underlineGrow 1.4s ease-out forwards;
+}
+
+/* ANIMATIONS */
+@keyframes fadeDown {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes underlineGrow {
+    from { width: 0; }
+    to { width: 180px; }
+}
+/* -------------------------------
+   CATEGORY MODERN GRID
+--------------------------------*/
+.cat-modern-grid {
+    width: 85%;
+    margin: 20px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 22px;
+}
+
+.cat-modern-card {
+    background: white;
+    border: 1px solid #dce4ff;
+    border-radius: 14px;
+    padding: 18px;
+    text-align: center;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.cat-modern-card img {
+    width: 70px;         /* exact same width */
+    height: 70px;        /* exact same height */
+    object-fit: contain; /* keeps image proportions perfect */
+    margin: 0 auto 10px;
+    display: block;
+}
+
+
+.cat-modern-card p {
+    font-size: 15px;
+    font-weight: 600;
+    color: #005BFF;
+}
+
+.cat-modern-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.10);
+}
+
+/* -------------------------------
+   OFFER BANNER
+--------------------------------*/
+.offer-modern {
+    background: linear-gradient(90deg, #005BFF, #00c6ff);
+    padding: 20px;
+    text-align: center;
+    border-radius: 14px;
+    width: 85%;
+    margin: 40px auto;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.offer-modern span {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* ==========================================
+   SHOP / PRODUCTS PAGE CONTAINER
+========================================== */
+.shop-container {
+    width: 90%;
+    margin: 40px auto 60px;
+}
+
+/* ==========================================
+   SUCCESS / INFO MESSAGE
+========================================== */
+.msg-box-success {
+    width: 60%;
+    margin: 0 auto 25px;
+    padding: 12px 16px;
+    background: #e6f9ec;
+    border-left: 6px solid #00b454;
+    color: #05843e;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 8px;
+    text-align: center;
+}
+/* =====================================
+   WOW PRODUCTS HEADER
+===================================== */
+
+/* Title with glow + depth */
+.shop-title {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 900;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+    color: #0a2540;
+    text-shadow:
+        0 2px 6px rgba(0, 91, 255, 0.25),
+        0 6px 18px rgba(0, 91, 255, 0.15);
+    position: relative;
+}
+
+/* glowing divider */
+.shop-title::after {
+    content: "";
+    display: block;
+    width: 110px;
+    height: 6px;
+    margin: 14px auto 0;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #005BFF,
+        #00C6FF,
+        #005BFF,
+        transparent
+    );
+    border-radius: 20px;
+}
+
+/* Subtitle */
+.shop-subtitle {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #555;
+    margin-top: 14px;
+    margin-bottom: 36px;
+}
+/* =====================================
+   FILTER BAR – SIMPLE & ELEGANT
+===================================== */
+
+.filter-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+/* Label – clean text */
+.filter-bar label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #444;
+}
+
+/* Dropdown – minimal pill */
+.filter-bar select {
+    padding: 8px 18px;
+    border-radius: 22px;
+    border: 1px solid #d0d7ff;
+    font-size: 14px;
+    font-weight: 500;
+    background: #f9fbff;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Hover / focus – soft highlight */
+.filter-bar select:hover,
+.filter-bar select:focus {
+    border-color: #005BFF;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(0,91,255,0.12);
+    outline: none;
+}
+
+/* ==========================================
+   PRODUCT GRID (UNCHANGED)
+========================================== */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 28px;
+    justify-items: center;
+}
+
+/* ==========================================
+   PRODUCT CARD  (❌ NOT CHANGED)
+========================================== */
+.product-card {
+    width: 100%;
+    max-width: 300px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 18px;
+    border: 1px solid #e6eeff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    text-align: center;
+    transition: 0.35s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 91, 255, 0.18);
+}
+
+/* Product Image */
+.product-card img {
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+    margin-bottom: 12px;
+    transition: 0.3s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.08);
+}
+
+/* Product Name */
+.product-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 6px;
+}
+
+/* Price */
+.price {
+    font-size: 20px;
+    font-weight: 700;
+    color: #005BFF;
+    margin-bottom: 8px;
+}
+
+/* ==========================================
+   CATEGORY TAG (SIMPLE + CLEAN)
+========================================== */
+.product-category {
+    background: #f5f7fa;
+    padding: 4px 14px;
+    border-radius: 20px;
+    display: inline-block;
+    font-size: 13px;
+    color: #444;
+    font-weight: 500;
+    border: 1px solid #e3e6ec;
+    margin-bottom: 12px;
+}
+
+/* ==========================================
+   ADD TO CART BUTTON
+========================================== */
+.product-card button {
+    width: 100%;
+    padding: 12px 0;
+    background: #007bff;
+    border: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.product-card button:hover {
+    background: #005fcc;
+    transform: translateY(-2px);
+}
+
+.product-card button:active {
+    transform: scale(0.96);
+}
+
+/* ==========================================
+   SINGLE USER PROFILE CONTAINER
+========================================== */
+.single-user-container {
+    width: 60%;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 35px 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    animation: fadeUser 0.5s ease-out;
+}
+
+@keyframes fadeUser {
+    from { opacity: 0; transform: translateY(15px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* PROFILE TITLE */
+.single-user-title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #222;
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================
+   PROFILE TABLE
+========================================== */
+.single-user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+.single-user-table th {
+    width: 160px;
+    text-align: left;
+    background: #f3f6ff;
+    padding: 12px 14px;
+    border-radius: 8px 0 0 8px;
+    font-weight: 600;
+    color: #005BFF;
+    border-bottom: 1px solid #e1e6ff;
+}
+
+.single-user-table td {
+    padding: 12px 14px;
+    background: #fafbff;
+    border-radius: 0 8px 8px 0;
+    border-bottom: 1px solid #e8ecff;
+    color: #333;
+}
+
+/* Hover Row Highlight */
+.single-user-table tr:hover th,
+.single-user-table tr:hover td {
+    background: #eef3ff;
+}
+
+/* Remove border from last row */
+.single-user-table tr:last-child th,
+.single-user-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* ==========================================
+   BUTTON ROW
+========================================== */
+.right-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 20px;
+}
+
+/* Update Button (Blue) */
+.btn.login {
+    background: #005BFF;
+    padding: 10px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.btn.login:hover {
+    background: #003ec9;
+}
+
+/* Delete Button (White Border) */
+.btn.logout {
+    background: white;
+    border: 1px solid #ff4b4b;
+    color: #ff4b4b;
+    padding: 10px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn.logout:hover {
+    background: #ff4b4b;
+    color: white;
+}
+
+
+/* ==========================================
+   USERS LIST PAGE CONTAINER
+========================================== */
+.users-container {
+    width: 90%;
+    margin: 40px auto;
+    padding-bottom: 60px;
+}
+
+/* Page Title */
+.users-title {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    color: #1a1a1a;
+    margin-bottom: 25px;
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================
+   USERS TABLE
+========================================== */
+.users-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+    background: white;
+}
+
+/* Table Header */
+.users-table thead {
+    background: #e9f1ff;
+}
+
+.users-table thead th {
+    padding: 14px;
+    text-align: left;
+    font-weight: 700;
+    color: #005BFF;
+    font-size: 15px;
+    border-bottom: 2px solid #d2e0ff;
+}
+
+/* Table Rows */
+.users-table tbody tr {
+    border-bottom: 1px solid #eef2ff;
+    transition: 0.25s ease;
+}
+
+/* Hover Effect */
+.users-table tbody tr:hover {
+    background: #f5f9ff;
+    transform: scale(1.01);
+}
+
+/* Table Cells */
+.users-table td {
+    padding: 12px 14px;
+    font-size: 15px;
+    color: #333;
+}
+
+/* Zebra Striping */
+.users-table tbody tr:nth-child(even) {
+    background: #fafbff;
+}
+
+/* ==========================================
+   ACTION BUTTONS (Update / Delete)
+========================================== */
+.users-table td .btn {
+    padding: 6px 14px !important;
+    font-size: 13px !important;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+/* Update Button - Blue */
+.users-table .btn.login {
+    background: #005BFF;
+    color: white;
+}
+.users-table .btn.login:hover {
+    background: #003ec9;
+}
+
+/* Delete Button - Red Border */
+.users-table .btn.logout {
+    background: white;
+    border: 1px solid #ff4b4b;
+    color: #ff4b4b;
+}
+.users-table .btn.logout:hover {
+    background: #ff4b4b;
+    color: white;
+}
+
+
+/* ==========================================
+   ADD PRODUCT PAGE CONTAINER 
+========================================== */
+.product-add-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.product-add-card {
+    width: 420px;
+    background: #ffffff;
+    padding: 35px 35px 45px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    animation: fadeAdd 0.5s ease-out;
+}
+
+@keyframes fadeAdd {
+    from {opacity: 0; transform: translateY(12px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* Page Title */
+.product-add-card h2 {
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    background: linear-gradient(90deg, #005BFF, #00c3ff);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+/* ==========================================
+   FORM FIELDS
+========================================== */
+.product-add-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.product-add-card label {
+    font-size: 15px;
+    color: #333;
+    font-weight: 600;
+    margin-top: 6px;
+}
+
+.product-add-card input,
+.product-add-card select {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #d8dffc;
+    font-size: 15px;
+    transition: 0.25s;
+    background: #f8faff;
+}
+
+/* Focus Effect */
+.product-add-card input:focus,
+.product-add-card select:focus {
+    border-color: #005BFF;
+    box-shadow: 0 0 0 3px rgba(0,91,255,0.15);
+    outline: none;
+}
+
+/* File Input */
+.file-input {
+    background: #ffffff;
+}
+
+/* ==========================================
+   SUBMIT BUTTON
+========================================== */
+.product-add-btn {
+    margin-top: 18px;
+    padding: 12px 0;
+    background: linear-gradient(90deg, #005BFF, #008fff);
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 6px 16px rgba(0, 91, 255, 0.25);
+}
+
+.product-add-btn:hover {
+    background: linear-gradient(90deg, #0040c9, #0077dd);
+    transform: translateY(-2px);
+}
+
+.product-add-btn:active {
+    transform: scale(0.96);
+}
+
+/* ==========================================
+   BOTTOM LINK
+========================================== */
+.bottom-link {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 14px;
+    color: #555;
+}
+
+.bottom-link a {
+    color: #005BFF;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.bottom-link a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==========================================
+   LOGIN PAGE CONTAINER
+========================================== */
+.login-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 60px;
+    animation: fadeLogin 0.6s ease-out;
+}
+
+@keyframes fadeLogin {
+    from {opacity: 0; transform: translateY(15px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* Message Box (same style you use) */
+.login-container h3 {
+    text-align: center;
+    width: 60%;
+    margin: 0 auto 20px;
+    background: #ecf7ff;
+    color: #0080d4;
+    border-left: 6px solid #0099ff;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+/* ==========================================
+   LOGIN CARD
+========================================== */
+.login-card {
+    width: 380px;
+    background: white;
+    padding: 35px 40px 45px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+/* Title */
+.login-card h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 5px;
+}
+
+/* Subtitle */
+.login-card .subtitle {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+/* ==========================================
+   FORM
+========================================== */
+.login-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.login-card label {
+    text-align: left;
+    font-size: 14px;
+    color: #444;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.login-card input {
+    padding: 10px 12px;
+    font-size: 15px;
+    border-radius: 8px;
+    border: 1px solid #dbe4ff;
+    background: #f8faff;
+    transition: 0.25s ease;
+}
+
+/* Focus Effect */
+.login-card input:focus {
+    border-color: #005BFF;
+    box-shadow: 0 0 0 3px rgba(0, 91, 255, 0.15);
+    outline: none;
+}
+
+/* ==========================================
+   LOGIN BUTTON
+========================================== */
+.login-btn {
+    margin-top: 10px;
+    padding: 12px 0;
+    border: none;
+    background: linear-gradient(90deg, #005BFF, #0096ff);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 6px 16px rgba(0,91,255,0.25);
+}
+
+/* Hover */
+.login-btn:hover {
+    background: linear-gradient(90deg, #0042c9, #007adf);
+    transform: translateY(-2px);
+}
+
+/* Press */
+.login-btn:active {
+    transform: scale(0.97);
+}
+
+/* ==========================================
+   REGISTER LINK
+========================================== */
+.register-link {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666;
+}
+
+.register-link a {
+    color: #005BFF;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==========================================
+   CART PAGE CONTAINER
+========================================== */
+.cart-container {
+    width: 90%;
+    margin: 40px auto 60px;
+    animation: fadeCart 0.5s ease-out;
+}
+
+@keyframes fadeCart {
+    from {opacity: 0; transform: translateY(20px);}
+    to   {opacity: 1; transform: translateY(0);}
+}
+
+.cart-container h3 {
+    text-align: center;
+    background: #ecf7ff;
+    padding: 10px;
+    border-radius: 8px;
+    color: #0077cc;
+    width: 60%;
+    margin: 0 auto 18px;
+}
+
+/* ==========================================
+   TITLES
+========================================== */
+.cart-title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.cart-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* ==========================================
+   EMPTY CART BOX
+========================================== */
+.empty-cart-box {
+    width: 380px;
+    margin: 40px auto;
+    text-align: center;
+    background: #ffffff;
+    padding: 30px 25px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.empty-cart-box .empty-img {
+    width: 120px;
+    margin-bottom: 15px;
+}
+
+.empty-cart-box h2 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.empty-cart-box p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.empty-btn {
+    background: #005BFF;
+    padding: 10px 18px;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.empty-btn:hover {
+    background: #0040c9;
+}
+
+/* ==========================================
+   CART TABLE
+========================================== */
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+}
+
+.cart-table thead {
+    background: #eaf1ff;
+}
+
+.cart-table thead th {
+    padding: 14px;
+    text-align: left;
+    color: #005BFF;
+    font-size: 15px;
+    font-weight: 700;
+    border-bottom: 2px solid #d8e4ff;
+}
+
+.cart-table tbody tr {
+    transition: 0.25s ease;
+    border-bottom: 1px solid #eef2ff;
+}
+
+.cart-table tbody tr:hover {
+    background: #f5f9ff;
+}
+
+.cart-table td {
+    padding: 14px;
+    font-size: 15px;
+    color: #333;
+}
+
+/* Product Image inside table */
+.cart-img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+/* Remove Button */
+.remove-btn-table {
+    padding: 6px 12px;
+    background: #ffeded;
+    color: #d9534f;
+    border: 1px solid #ffb3b3;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.25s ease;
+}
+
+.remove-btn-table:hover {
+    background: #ff4c4c;
+    color: white;
+    border-color: #ff4c4c;
+}
+
+/* ==========================================
+   CART SUMMARY
+========================================== */
+.cart-summary {
+    width: 100%;
+    background: white;
+    padding: 18px 22px;
+    margin-top: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-summary h3 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.cart-summary span {
+    color: #005BFF;
+}
+
+/* BUY NOW BUTTON */
+.checkout-btn {
+    background: linear-gradient(90deg, #005BFF, #0099ff);
+    padding: 12px 22px;
+    color: white;
+    border-radius: 10px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s ease;
+    box-shadow: 0 6px 20px rgba(0,91,255,0.25);
+}
+
+.checkout-btn:hover {
+    background: linear-gradient(90deg, #0043c7, #007adf);
+    transform: translateY(-2px);
+}
