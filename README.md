@@ -17,7 +17,7 @@ The project showcases clean UI design and a well-structured backend using **Java
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** HTML, CSS, JavaScript  
+- **Frontend:** HTML, JSP, CSS, JavaScript  
 - **Backend:** Java, Spring Boot  
 - **Database:** MySQL  
 - **Tools:** Git, GitHub, STS  
